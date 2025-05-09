@@ -1,103 +1,79 @@
-import Image from "next/image";
+import HeroSection from "../components/HeroSection";
+import ComplianceSection from "../components/ComplianceSection";
+import ProductSection from "../components/ProductSection";
+import CaseStudySection from "../components/CaseStudySection";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-8 py-8 space-y-16">
+      <HeroSection
+        headline="NYC Hotel Emergency Beacon System"
+        subheadline="Ensure compliance with the NYC Safe Hotels Act. Protect your staff with advanced Bluetooth panic buttons, real-time location tracking, and seamless monitoring."
+        ctaLabel="Request a Compliance Consultation"
+        ctaHref="#contact"
+      />
+      <ComplianceSection>
+        <h2 id="compliance-heading" className="text-2xl font-bold text-blue-900 mb-4">NYC Safe Hotels Act Compliance</h2>
+        <ul className="list-disc list-inside text-blue-900 space-y-2">
+          <li>Meets all requirements for panic button deployment (NYC Safe Hotels Act, 2024).</li>
+          <li>Provides real-time alerts and precise location data for rapid response.</li>
+          <li>Includes compliance documentation and audit-ready reporting.</li>
+          <li>Supports human trafficking training verification.</li>
+        </ul>
+        <p className="mt-4 text-blue-800 text-sm">*Citations and legal references available upon request.</p>
+      </ComplianceSection>
+      <ProductSection>
+        <div className="flex-1">
+          <h2 id="product-heading" className="text-2xl font-bold text-blue-900 mb-4">How the System Works</h2>
+          <ul className="list-disc list-inside text-blue-900 space-y-2">
+            <li>Wearable Bluetooth panic buttons for staff</li>
+            <li>Room-based beacons for precise location</li>
+            <li>Gateway devices for secure data relay</li>
+            <li>Centralized monitoring software (Windows-based)</li>
+          </ul>
+          <p className="mt-4 text-blue-800">Easy installation, minimal infrastructure changes, and full support included.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex-1 flex justify-center">
+          {/* Placeholder for system diagram */}
+          <div className="w-64 h-48 bg-blue-100 rounded-lg flex items-center justify-center text-blue-400 border-2 border-blue-200">
+            <span className="text-lg">[System Diagram SVG]</span>
+          </div>
+        </div>
+      </ProductSection>
+      <CaseStudySection>
+        <h2 id="case-heading" className="text-2xl font-bold text-blue-900 mb-4">Proven Results in NYC Hotels</h2>
+        <blockquote className="italic text-blue-800 border-l-4 border-blue-400 pl-4 mb-2">
+          &quot;Since installing the beacon system, our staff feel safer and we passed our compliance audit with ease.&quot;
+        </blockquote>
+        <p className="text-blue-900 font-semibold">– General Manager, Midtown NYC Hotel</p>
+      </CaseStudySection>
+      <ContactSection>
+        <h2 id="contact-heading" className="text-2xl font-bold text-blue-900 mb-4">Contact & Quote Request</h2>
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-6" autoComplete="off" noValidate>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="name" className="font-semibold text-blue-900">Name</label>
+            <input id="name" name="name" type="text" required className="rounded border border-blue-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="email" className="font-semibold text-blue-900">Email</label>
+            <input id="email" name="email" type="email" required className="rounded border border-blue-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div className="flex flex-col gap-2 md:col-span-2">
+            <label htmlFor="hotel" className="font-semibold text-blue-900">Hotel Name</label>
+            <input id="hotel" name="hotel" type="text" required className="rounded border border-blue-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div className="flex flex-col gap-2 md:col-span-2">
+            <label htmlFor="message" className="font-semibold text-blue-900">Message</label>
+            <textarea id="message" name="message" rows={4} className="rounded border border-blue-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="How can we help?" />
+          </div>
+          <div className="md:col-span-2 flex justify-end">
+            <button type="submit" className="bg-blue-700 text-white font-semibold rounded-lg px-8 py-3 shadow-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </ContactSection>
+    </main>
   );
 }
