@@ -11,7 +11,7 @@ export default function Home() {
         headline="NYC Hotel Emergency Beacon System"
         subheadline="Ensure compliance with the NYC Safe Hotels Act. Protect your staff with advanced Bluetooth panic buttons, real-time location tracking, and seamless monitoring."
         ctaLabel="Request a Compliance Consultation"
-        ctaHref="#contact"
+        ctaHref="/demo"
       />
       <ComplianceSection>
         <h2 id="compliance-heading" className="text-2xl font-bold text-blue-900 mb-4">NYC Safe Hotels Act Compliance</h2>
